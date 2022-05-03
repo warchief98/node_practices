@@ -9,6 +9,7 @@
   "author": "A.mohseni",
   "license": "ISC",
   "dependencies": {
+    "lower-case": "^2.0.2",
     "upper-case": "^2.0.2"
   }
 }
