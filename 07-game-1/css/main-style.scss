@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin btn-style($property) {
+    border-color: $property;
+    background-color: $property;
+}
+
+.btn-red {
+    @include btn-style(red)
+}
+
+.btn-green {
+    @include btn-style(green)
+}
+
+.btn-orange {
+    @include btn-style(orange)
+}
+
+.btn-yellow {
+    @include btn-style(yellow)
+}
+
+.game-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    .top {
+        border: 1px solid red;
+        width: 100%;
+        display: flex;
+        height: 70%;
+        .picture {
+            width: 100%;
+            height: 100%;
+            border: 20px solid goldenrod;
+            background-color: transparent;
+            position: relative;
+            .profile-pic {
+                position: absolute;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 20px solid goldenrod;
+                width: 100px;
+                height: 100px;
+                background-color: #fff;
+            }
+        }
+        .left {
+            width: 100%;
+            background-color: rgba(255, 0, 0, 0.357);
+        }
+        .right {
+            width: 100%;
+            background-color: rgba(0, 30, 255, 0.357);
+        }
+    }
+    .bot {
+        width: 100%;
+        height: 30%;
+        background-color: rgba(0, 128, 0, 0.624);
+        .btn {
+            border-radius: 5px;
+            min-width: 120px;
+            height: 40px;
+            padding: 5px 12px;
+            border-style: solid;
+            border-width: 1px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.329);
+        }
+    }
+}
